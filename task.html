@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <h1>JavaScript Exercises</h1>
+  <p>This page contains three beginner JavaScript exercises that run in the browser using prompts and alerts.</p>
+
+  <h2>Exercise 1: Initials Generator</h2>
+  <p>Enter your full name and the program will generate your initials. For example, Andrew Solex becomes A.S.</p>
+
+  <h2>Exercise 2: Word Position Finder</h2>
+  <p>Enter a sentence and a letter, and the program will tell you the position of that letter in the sentence.</p>
+
+  <h2>Exercise 3: Username Generator</h2>
+  <p>Enter your first and last name, and the program will create a username made up of your full name in lowercase followed by the total number of characters. For example, Andrew Solex becomes andrewsolex_11.</p>
+
+<script>
+//  1. Create an initials generator program
+
+//  - Ask for full name
+//  - Output initials
+
+//  Example:
+//  Andrew Solex → A.S  
+
+const fullName = prompt("Enter full name:");
+const fName = fullName.split(" ")[0];
+const lName = fullName.split(" ")[1];
+const generatedInitials = fName[0].toUpperCase() + "." + lName[0].toUpperCase();
+alert(generatedInitials);
+
+// 2. Create a word position finder
+
+// - Ask for a sentence
+// - Ask for a letter
+// - Show the position of that letter
+
+const sentence = prompt("Enter a sentence:");
+const letter = prompt("Enter a letter:");
+const position = sentence.indexOf(letter);
+alert("The position of the letter is: " + position);
+
+// 3. Build a username generator
+
+// - Ask for:
+// -> First name
+// -> Last name
+
+// - Create a username like:
+// andrewsolex_11
+
+// (11 = total number of characters in first name and last name)
+
+const firstName = prompt("Enter first name:");
+const lastName = prompt("Enter last name:");
+const username = firstName.toLowerCase() + lastName.toLowerCase() + "_" + (firstName.length + lastName.length);
+alert(username);
+
+</script>
+</body>
